@@ -10,6 +10,16 @@
     input {
       outline: none;
     }
+    #email {
+      border: 1px solid #ccc;
+    }
+    #email:valid {
+      border: 1px solid green;
+    }
+
+    #email:invalid {
+      border: 1px solid red;
+    }
   </style>
 </head>
 
@@ -30,13 +40,27 @@
   user: <input type="text" id="user" /> <br />
   <!-- type设为email时, 该dom对象内置 checkValidity() 方法验证邮箱格式是否正确 -->
   email: <input type="email" id="email" /><br />
+
+  <!-- 兼容IE低版本的placeholder -->
+  <div class="box">
+    <input type="text" placeholder="请输入用户名"><br>
+    <input type="password" placeholder="请输入密码">
+  </div>
   <script>
     /*
         pc端表单元素常用的事件有：click、change、focus、blur、keydoown、keyup
         移动端事件： 移动端没有keydown、keyup事件，新增事件类型：input事件
         
         传统的表单类型有： text 、password、submit、reset、buttom、radio、CheckBox、file、hidden ....DraftEditor-alignCenter
+
         html5新增：search 、 url、email、tel、number、range、color、date、time、dataTime...
+            search 需要配合 datalist使用
+            <input  type="search" id='search' />
+            <datalist id="search">
+              <option>11</option>
+              <option>22</option>
+              <option>33</option>
+            </datalist>
 
         作用：
             提供了更加强大的功能，方便我们的开发一>在移动端使用对应的INPUT类型，当用户输入的时候可以调取出对应的虚拟键盘
@@ -47,6 +71,7 @@
               CSS中新是供的是input:valid/input:invalid
 
               新增属性 placeholder
+              IE低版本不支持 placeholder, 可以span标签定位到input中,添加事件，使其显示或隐藏
 
     */
     let submit = document.getElementById("submit");
@@ -87,14 +112,14 @@
     };
 
     oUser.onkeyup = function () {
-      if (
-        oUser.value.replace(/^ +| $/, "").length < 6 &&
-        oUser.value.replace(/^ +| $/, "").length
-      ) {
-        this.style.border = '1px solid red';
-      } else {
-        this.style.border = '1px solid green';
-      }
+      // if (
+      //   oUser.value.replace(/^ +| $/, "").length < 6 &&
+      //   oUser.value.replace(/^ +| $/, "").length
+      // ) {
+      //   this.style.border = '1px solid red';
+      // } else {
+      //   this.style.border = '1px solid green';
+      // }
     }
   </script>
 </body>
