@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    input {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  text: <input type="text" /> <br />
+  password: <input type="password" /> <br />
+
+  <!-- radio需要配合label for, 这样当点击文字的时候也能选中 -->
+  radio: <input type="radio" name="sex" id="sexMan" value="man" checked />
+  <label for="sexMan">男</label>
+  <input type="radio" name="sex" id="sexWoman" value="woman" />
+  <label for="sexWoman">女</label>
+  <br />
+
+  <!-- submit 需要配合form表单,才默认提交 -->
+  submit: <input type="submit" id="submit" value="提交" /><br />
+
+  user: <input type="text" id="user" /> <br />
+  <!-- type设为email时, 该dom对象内置 checkValidity() 方法验证邮箱格式是否正确 -->
+  email: <input type="email" id="email" /><br />
+  <script>
+    /*
+        pc端表单元素常用的事件有：click、change、focus、blur、keydoown、keyup
+        移动端事件： 移动端没有keydown、keyup事件，新增事件类型：input事件
+        
+        传统的表单类型有： text 、password、submit、reset、buttom、radio、CheckBox、file、hidden ....DraftEditor-alignCenter
+        html5新增：search 、 url、email、tel、number、range、color、date、time、dataTime...
+
+        作用：
+            提供了更加强大的功能，方便我们的开发一>在移动端使用对应的INPUT类型，当用户输入的时候可以调取出对应的虚拟键盘
+            方便用户的快捷输入（H5表单新增的核心应用）
+
+            ->相对于传统的表单类型提供了新的验证方式：
+              Js中新提供的是input.checkValidity()
+              CSS中新是供的是input:valid/input:invalid
+
+              新增属性 placeholder
+
+    */
+    let submit = document.getElementById("submit");
+    let sexMan = document.getElementById("sexMan");
+    let sexWoman = document.getElementById("sexWoman");
+
+    submit.onclick = function (e) {
+      let sexType = 0;
+      if (!sexMan.checked) {
+        sexType = 1;
+      }
+
+      console.log(sexType);
+    };
+
+    sexMan.onchange = sexWoman.onchange = function (e) {
+      console.log(this.value);
+    };
+
+    let oUser = document.getElementById("user");
+    let oEmail = document.getElementById("email");
+
+    oUser.onblur = function () {
+      if (
+        oUser.value.replace(/^ +| $/, "").length < 6 &&
+        oUser.value.replace(/^ +| $/, "").length
+      ) {
+        console.log("用户名长度太短", this.value);
+      } else if (!oUser.value.replace(/^ +| $/, "").length) {
+        console.log("用户名不能为空");
+      }
+    };
+
+    oEmail.onblur = function () {
+      if (!this.checkValidity()) {
+        console.log('邮箱格式不正确...');
+      }
+    };
+
+    oUser.onkeyup = function () {
+      if (
+        oUser.value.replace(/^ +| $/, "").length < 6 &&
+        oUser.value.replace(/^ +| $/, "").length
+      ) {
+        this.style.border = '1px solid red';
+      } else {
+        this.style.border = '1px solid green';
+      }
+    }
+  </script>
+</body>
+
+</html>
