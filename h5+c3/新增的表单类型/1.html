@@ -43,9 +43,18 @@
 
   <!-- 兼容IE低版本的placeholder -->
   <div class="box">
-    <input type="text" placeholder="请输入用户名"><br>
-    <input type="password" placeholder="请输入密码">
+    <input type="text" placeholder="请输入用户名"><span>请输入用户名</span><br>
+    <input type="password" placeholder="请输入密码"><span>请输入密码</span>
   </div>
+  <br>
+
+  <input type="search" name="search" list="searchlist" />
+  <datalist id="searchlist">
+    <option>ni</option>
+    <option>2ds</option>
+    <option>sd</option>
+  </datalist>
+
   <script>
     /*
         pc端表单元素常用的事件有：click、change、focus、blur、keydoown、keyup
@@ -55,8 +64,8 @@
 
         html5新增：search 、 url、email、tel、number、range、color、date、time、dataTime...
             search 需要配合 datalist使用
-            <input  type="search" id='search' />
-            <datalist id="search">
+            <input  type="search" list='searchlist' />
+            <datalist id="searchlist">
               <option>11</option>
               <option>22</option>
               <option>33</option>

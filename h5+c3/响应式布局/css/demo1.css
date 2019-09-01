@@ -1,0 +1,92 @@
+.w {
+  width: 960PX;
+  margin: 0 auto;
+}
+
+/* header start */
+
+.header {
+  height: 88px;
+  border-bottom: 1px solid #ccc;
+  background: orange;
+}
+
+.header> h1 {
+  display: none;
+}
+
+.header .nav {
+  position: relative;
+  height: 88px;
+}
+
+.header .nav> .logo {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  height: 51px;
+}
+
+.header .nav> ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.header .nav> ul> li {
+  float: left;
+}
+
+.header .nav> ul a {
+  position: relative;
+  z-index: 9 ;
+  display: block;
+  padding: 0 30px;
+  height: 88px;
+  line-height: 88px;
+  color: #f4f4f4;
+  font-size: 18px;
+}
+
+.header .nav> ul i {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: -1;
+  width: 50%;
+  height: 88px;
+}
+
+.header .nav> ul a:hover> i {
+  background-color: #ccc;
+  width: 100%;
+  margin-left: -25%;
+  transition: all .3s linear;
+}
+
+/* header end */
+
+/* 响应式 */
+@media all and (max-width: 760px) {
+  .w {
+    width: 100%;
+  }
+  .header {
+    height: 46px;
+  }
+
+  .header .nav> .logo {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    height: 28px;
+  }
+
+  .header .nav> .logo img {
+    height: 28px;
+  }
+
+  .header .w .nav ul {
+    display: none;
+  }
+}

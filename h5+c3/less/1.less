@@ -1,0 +1,27 @@
+@color: #4d4d4d;
+
+.wrap() {
+    width: 77px;
+    height: 77px;
+}
+
+.border(@b:1px, @s:solid, @c:black) {
+  border: @b @s @c;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: deeppink;
+  .border(@b: 2px, @c: red);
+
+  .child {
+    .wrap();
+    background-color: @color;
+  }
+
+  .child2 {
+    .wrap();
+    background-color: orange;
+  }
+}

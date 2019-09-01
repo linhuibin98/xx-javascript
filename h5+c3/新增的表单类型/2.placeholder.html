@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    span {
+      font-size: 14px;
+      color: #aaa;
+      position: relative;
+      top: 0;
+      left: -150px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" name="usertext" id="user"><span id="holdertext">请输入用户名</span><br>
+  <input type="password" name="userpass" id="userpass"><span id="holderpass">请输入密码</span>
+
+  <script>
+    let oHolderText = document.getElementById('holdertext');
+    let oHolderPass = document.getElementById('holderpass');
+    let oUserPass = document.getElementById('userpass');
+    let oUser = document.getElementById('user');
+
+    function foucsFn(target) {
+      target.style.display = 'none';
+    }
+    function blurFn(target) {
+      if (!this.value) {
+        target.style.display = 'inline';
+      }
+    }
+    
+    oUser.onfocus = foucsFn.bind(oUser, oHolderText);
+    oUser.onblur = blurFn.bind(oUser, oHolderText);
+
+    oUserPass.onblur = blurFn.bind(oUserPass, oHolderPass);
+    oUserPass.onfocus = foucsFn.bind(oUserPass, oHolderPass);
+  </script>
+</body>
+</html>
