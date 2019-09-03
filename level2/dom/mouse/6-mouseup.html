@@ -25,28 +25,32 @@
   </style>
 </head>
 <body>
-  <div class="box">
+  <div class="box wrap">
     box
     <div class="child">child</div>
   </div>
 
   <script type="text/javascript">
+
+      // mouseup  鼠标按下后松开时触发（无论是否在目标元素中点击，只要在目标元素中松开，就会触发该事件），左击和右击都会触发。
+
     // 获取box节点对象
     let oBox = document.querySelector('.box');
     let oChild = document.querySelector('.child');
 
-    oChild.onmouseover = function (e) {
-      console.log('child');
-    }
+    
 
-    oBox.onmouseover = function (e) {
+    oBox.onmouseup = function (e) {
+      console.log(e);
       console.log('box');
     }
 
-    // onmouseenter 和 onmouseover 的区别
-    // 不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
+    console.dir(oBox);
 
-    // 只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+    oChild.addEventListener('mouseup', function (e) {
+      e.stopPropagation();  // 阻止事件冒泡
+      console.log('child');
+    })
 
 
   </script>

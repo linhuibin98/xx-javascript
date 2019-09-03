@@ -30,37 +30,8 @@
   </div>
 
   <script>
-    /*
-      阻止事件冒泡：
-            w3c的方法是e.stopPropagation()，IE则是使用e.cancelBubble = true
 
-      取消默认事件 (如链接<a>，提交按钮<input type=”submit”>等)
-            w3c的方法是e.preventDefault()，IE则是使用e.returnValue = false;
-
-      return false
-          javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡
-
-      事件注意点
-          event代表事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等；
-          event对象只在事件发生的过程中才有效。
-          firefox里的event跟IE里的不同，IE里的是全局变量，随时可用；firefox里的要用参数引导才能用，是运行时的临时变量。
-          在IE/Opera中是window.event，在Firefox中是event；而事件的对象，在IE中是window.event.srcElement，在Firefox中是event.target，Opera中两者都可用
-
-
-
-      offsetX:
-      offsetY:   
-
-      pageX:
-      pageY:
-
-      screenX:
-      screenY:
-
-      clientX:  提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)。例如，不论页面是否有水平滚动，当你点击客户端区域的左上角时，鼠标事件的 clientX 值都将为 0
-      clientY:  提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 clientY 值为 0 ，这一值与页面是否有垂直滚动无关
-    
-    */
+    // 鼠标点击后，等待300ms触发该事件（因为要确定是否是dblclick事件），只有左击时才会触发。
 
     let oBox = document.getElementsByClassName('box')[0];
     let oChild = document.getElementsByClassName('child')[0];

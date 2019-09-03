@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      background-color: deepskyblue;
+      transition: all .3s linear; 
+    }
+
+    .box.trans {
+      transform: rotateZ(360deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <script>
+    let oBox = document.querySelector('.box');
+
+    /*
+      click：在移动端click属于单击事件，不是点击事件；在移动端的项目中我么经常会区分单击做什么和双击做什么，所以移动端的浏览器在识别click的时候，只有确定是单击后才会把它执行；
+      在移动端使用click会存在300ms的延迟：浏览器在第一次点击结束后，还需要等到300ms看是否L触发了第二次点击，如果触发了第二次点击就不属于click了，没有触发第二次点击才属于click
+      
+    * /
+    /*
+    oBox.onclick = function (e) {
+      this.className += ' trans';
+    }
+    */
+
+
+    // 移动端利用 touchstart、touchmove、touchend 模拟点击事件,   touchstart必须在目标元素内触发，才会相继触发touchmove、touchend，不会单独触发touchmove和touchend
+
+    let tab = function (ele, callback) {
+      let isMove = false;
+
+      ele.addEventListener('touchstart', function (e) {
+        isMove = false;
+        ele.style.transitionDuration = '0s';
+        ele.style.transform = 'rotate(0deg)';
+      })
+
+      ele.addEventListener('touchmove', function (e) {
+        isMove = true;
+      })
+
+      ele.addEventListener('touchend', function (e) {
+        if (isMove) return;
+        ele.style.transitionDuration = '.3s';
+        callback.call(ele, e);
+      })
+    }
+
+    tab(oBox, function (e) {
+      this.style.transform = 'rotateZ(360deg)';
+    })
+    
+
+  </script>
+</body>
+</html>

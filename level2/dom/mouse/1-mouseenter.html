@@ -36,17 +36,18 @@
     let oChild = document.querySelector('.child');
 
     oBox.onmouseenter = function (e) {
-      console.log('mouseenter');
+      console.log(e);
+      console.log('box', e.type);
     }
 
-    oBox.onmouseover = function (e) {
-      console.log('mouseover');
+    oChild.onmouseenter = function (e) {
+      console.log('child');
     }
 
     // onmouseenter 和 onmouseover 的区别
     // 不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
 
-    // 只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
+    // 只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。即 默认阻止事件冒泡  e.stopPropagation()
 
 
   </script>
