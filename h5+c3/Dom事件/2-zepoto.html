@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="zepto/zepto.js"></script>
+  <script src="zepto/touch.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0 0 -100px;
+      background-color: deepskyblue;
+    }
+    .wrap {
+      width: 150px;
+      height: 150px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="wrap"></div>
+  <script>
+/*
+    tap —元素tap的时候触发。
+    singleTap and doubleTap — 这一对事件可以用来检测元素上的单击和双击。(如果你不需要检测单击、双击，使用 tap 代替)。
+    longTap — 当一个元素被按住超过750ms触发。
+    swipe, swipeLeft, swipeRight, swipeUp, swipeDown — 当元素被划过时触发。(可选择给定的方向)
+*/
+    let $oWrap = $('.wrap');
+    $('.box')
+            .swipeLeft(function (e) {
+              $oWrap.hide();
+            })
+            .swipeRight(function (e) {
+              $oWrap.css('display', 'block');
+            })
+  </script>
+</body>
+</html>
