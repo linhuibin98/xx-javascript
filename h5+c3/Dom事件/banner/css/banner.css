@@ -51,3 +51,7 @@ html {
 .banner> .tip li:nth-of-type(5) {
   margin-right: 0;
 }
+
+.banner> .tip li.bg {
+  background-color: #0cff12;
+}

@@ -15,6 +15,7 @@ $(function () {
     let $swiper = $('.swiper');
     let $sliderList = $swiper.children('.slider');
     let imgList = $swiper.find('img');
+    let $tips = $('.tip li');
 
     let step = 1;    // 当前轮播图所在位置
 
@@ -88,6 +89,17 @@ $(function () {
         } 
         $swiper[0].style.transitionDuration = '.3s';
         startL = -step * winW;
+        // tip
+        $tips.each(function (index, tip) {
+          $(tip).removeClass('bg');
+        });
+
+        if (step === 0 || step === count - 1) {
+          (step === 0) ? $tips.eq($tips.length - 1).addClass('bg') : $tips.eq(0).addClass('bg');
+        } else {
+          $tips.eq(step - 1).addClass('bg');
+        }
+        // swappers left change
         $swiper.css('left', startL);
         lazyImg();  // step变化后...加载图片
 
@@ -97,7 +109,7 @@ $(function () {
             $swiper[0].style.transitionDuration = '0s';
             step = (step === 0) ? (count - 2) : 1;
             startL = -step * winW;
-            lazyImg(); 
+            lazyImg();
             $swiper.css('left', startL);
           }
           window.clearTimeout(timer);
