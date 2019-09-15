@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/方法封装/getType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/方法封装/formatDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/formatDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/方法封装/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +181,8 @@
       <workItem from="1568213214687" duration="61000" />
       <workItem from="1568258958953" duration="3592000" />
       <workItem from="1568435485159" duration="5821000" />
-      <workItem from="1568516833241" duration="1513000" />
+      <workItem from="1568516833241" duration="2259000" />
+      <workItem from="1568519610597" duration="2747000" />
     </task>
     <servers />
   </component>
