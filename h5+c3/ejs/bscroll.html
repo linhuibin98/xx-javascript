@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script charset="UTF-8" type="text/javascript" src="js/jquery.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="js/ejs.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="js/bscroll.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            overflow: hidden;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        header {
+            position: relative;
+            z-index: 9;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            background: linear-gradient(to bottom right, red, blue);
+        }
+
+        header > h1 {
+            width: 100%;
+            font-size: .4rem;
+        }
+
+        header > h1::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        header > h1 > span {
+            float: left;
+            width: 25%;
+        }
+
+        section {
+            width: 100%;
+            text-align: center;
+        }
+
+        section li {
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+        }
+
+        section li::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        section li:nth-child(even) {
+            background-color: deepskyblue;
+        }
+
+        section li > span {
+            float: left;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>
+        <span>编号</span><span>姓名</span><span>性别</span><span>成绩</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+    </ul>
+</section>
+
+<script charset="UTF-8" type="text/template" id="dataTemplate">
+    <% $.each(data, function (index, item) { %>
+    <li>
+        <span><%= item.id %></span>
+        <span><%= item.name %></span>
+        <span><%= item.sex %></span>
+        <span><%= item.grade %></span>
+    </li>
+    <% }) %>
+
+</script>
+
+<script type="text/javascript">
+    // 在移动端开发中，使用POSITION:FIXED固定定位，很多的手机都支持不好，
+    // 尤其是在定位的区域还需要输入内容调取虚拟键盘的时候会出现很多很多的问题解决这个问题，就不能使用固定定位了，而使用局部滚动处理（ISCROLL）
+
+
+    // REM
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+
+    // 计算content区域的高度
+    //实现终向局部滚动，我们营先需要把最外层容器的高度设定好
+    let $content = $('.content');
+
+    $content.css('height', document.documentElement.clientHeight - $('header').outerHeight());
+
+
+    // 字符串拼接数据
+    let str = '';
+    let template = $('#dataTemplate').html();
+
+    function renderHtml(data) {
+        return ejs.render(template, {data: data});
+    }
+
+    $.ajax('data/data.json', {
+        type: 'get',
+        success(res) {
+
+            // res.forEach(function (item, index) {
+            //     str += `<li><span>${item.id}</span><span>${item.name}</span><span>${item.sex}</span><span>${item.grade}</span></li>`
+            // });
+
+            $('.content ul').append(renderHtml(res));
+
+            // 在数据绑定后实现局部滚动
+            let myScroll = new BScroll('.content');
+
+        },
+        error(msg) {
+            console.log(msg);
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="header">
+    <h1 class="logo">
+        <img class="logo-img" src="" alt="">
+    </h1>
+    <div class="nav">
+        <input type="text" name="search">
+        <ul class="nav-box">
+            <li class="nav-item"></li>
+            <li class="nav-item"></li>
+            <li class="nav-item"></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <video src="https://vd2.bdstatic.com/mda-jfns91k8zhmkydef/sc/mda-jfns91k8zhmkydef.mp4?auth_key=1568214198-0-0-88130a0836ad13372f41fbcdbeb1bfab&bcevod_channel=searchbox_feed&pd=bjh&abtest=all" controls></video>
+</div>
+<div class="footer"></div>
+
+<script type="text/javascript">
+    let oHeader = document.getElementById('header');
+    console.dir(oHeader);  // <div id="header">…</div>
+    /*
+    let oNavItem = document.getElementsByClassName('nav-item');
+    let oNavBox = document.getElementsByClassName('nav-box')[0];
+    console.log(oNavItem);
+    console.log(oNavItem[3]);
+    console.log(oNavItem.length);
+    let oLi = document.createElement('li');
+    oLi.className = 'nav-item';
+    oNavBox.appendChild(oLi);
+    let gather = document.getElementsByClassName('content footer');
+    console.log(gather);
+
+    let search = document.getElementsByName('search');
+    console.log(search);
+
+    let elements = document.getElementsByTagName('li');
+    console.log(elements);
+    */
+    let video = document.querySelector('video');
+
+    console.log(document.fullscreenElement);
+
+
+    video.addEventListener('fullscreenchange', function (ev) {
+        console.log(document.onfullscreenchange);
+        console.log('开启全屏');
+    });
+    document.addEventListener('fullscreenchange', function (ev) {
+        console.log('开启全屏...');
+    })
+</script>
+</body>
+</html>

@@ -44,22 +44,18 @@
 
     event.target    事件触发目标元素 (就是用querySelector(), 或者document.getElementById()获取的元素上拥有的属性和方法)
 
-      event.target.childNodes   目标元素的孩子节点（包括文本节点），数组存储
-      
-      event.target.childElementCount   目标元素的孩子元素的数量
-
-      event.target.children   目标元素的孩子元素(不不不包括文本节点)
-                         
-      event.target.classList    ["box", "wrap", value: "box wrap"]   目标元素class 的类名，数组方式依次存储，最后一位存储class在标签上的值
-
-      * event.target.className   class在标签上的值，可读可写 （event.target.className = 'container box'），长用于增加标签class类名
-
-
-
-
   
  */
-clientHeight: 400
+childNodes   目标元素的孩子节点（包括文本节点），数组存储
+
+childElementCount   目标元素的孩子元素的数量
+
+children   目标元素的孩子元素(不不不包括文本节点)
+
+classList    ["box", "wrap", value: "box wrap"]   目标元素class 的类名，数组方式依次存储，最后一位存储class在标签上的值
+
+className   class在标签上的值，可读可写 （event.target.className = 'container box'），长用于增加标签class类名
+clientHeight: 400        //
 clientLeft: 0
 clientTop: 0
 clientWidth: 400

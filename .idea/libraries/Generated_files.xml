@@ -3,10 +3,28 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/h5+c3/webapp/js/1.js" />
+        <item url="file://$PROJECT_DIR$/typescript/1.基础类型.js" />
+        <item url="file://$PROJECT_DIR$/typescript/2.变量声明.js" />
+        <item url="file://$PROJECT_DIR$/typescript/3.接口.js" />
+        <item url="file://$PROJECT_DIR$/typescript/4.联合类型.js" />
+        <item url="file://$PROJECT_DIR$/typescript/5.数组类型.js" />
+        <item url="file://$PROJECT_DIR$/typescript/6.函数类型.js" />
+        <item url="file://$PROJECT_DIR$/typescript/7.类型断言.js" />
+        <item url="file://$PROJECT_DIR$/typescript/8.类.js" />
+        <item url="file://$PROJECT_DIR$/typescript/9.泛型.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/h5+c3/webapp/js/1.js" />
+      <root url="file://$PROJECT_DIR$/typescript/1.基础类型.js" />
+      <root url="file://$PROJECT_DIR$/typescript/2.变量声明.js" />
+      <root url="file://$PROJECT_DIR$/typescript/3.接口.js" />
+      <root url="file://$PROJECT_DIR$/typescript/4.联合类型.js" />
+      <root url="file://$PROJECT_DIR$/typescript/5.数组类型.js" />
+      <root url="file://$PROJECT_DIR$/typescript/6.函数类型.js" />
+      <root url="file://$PROJECT_DIR$/typescript/7.类型断言.js" />
+      <root url="file://$PROJECT_DIR$/typescript/8.类.js" />
+      <root url="file://$PROJECT_DIR$/typescript/9.泛型.js" />
     </CLASSES>
     <SOURCES />
   </library>

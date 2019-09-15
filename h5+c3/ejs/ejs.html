@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script charset="UTF-8" type="text/javascript" src="js/jquery.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="js/ejs.js"></script>
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            font-size: 14px;
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            background: linear-gradient(to bottom right, red, blue);
+        }
+
+        header > h1 {
+            width: 100%;
+            font-size: .4rem;
+        }
+
+        header > h1::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        header > h1 > span {
+            float: left;
+            width: 25%;
+        }
+
+        section {
+            width: 100%;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        section li {
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+        }
+
+        section li::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        section li:nth-child(even) {
+            background-color: deepskyblue;
+        }
+
+        section li > span {
+            float: left;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>
+        <span>编号</span><span>姓名</span><span>性别</span><span>成绩</span>
+    </h1>
+</header>
+<section class="content">
+    <ul>
+    </ul>
+</section>
+
+<script charset="UTF-8" type="text/template" id="dataTemplate">
+    <% $.each(data, function (index, item) { %>
+    <li>
+        <span><%= item.id %></span>
+        <span><%= item.name %></span>
+        <span><%= item.sex %></span>
+        <span><%= item.grade %></span>
+    </li>
+    <% }) %>
+
+</script>
+
+<script type="text/javascript">
+    // REM
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+
+    // 字符串拼接数据
+    let str = '';
+    let template = $('#dataTemplate').html();
+
+    function renderHtml(data) {
+        let res = ejs.render(template, {data: data});
+
+        return res;
+    }
+
+    $.ajax('data/data.json', {
+        type: 'get',
+        success(res) {
+
+            // res.forEach(function (item, index) {
+            //     str += `<li><span>${item.id}</span><span>${item.name}</span><span>${item.sex}</span><span>${item.grade}</span></li>`
+            // });
+
+            $('.content ul').append(renderHtml(res));
+
+        },
+        error(msg) {
+            console.log(msg);
+        }
+    })
+</script>
+</body>
+</html>
