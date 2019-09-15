@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/javascript/方法封装/formatStr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/方法封装/getType.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/getType.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,11 +101,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.getType.js">
+  <component name="RunManager" selected="Node.js.formatStr.js">
     <configuration name="ejs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/xx-javascript/h5+c3/ejs/ejs.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="formatDate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/javascript/方法封装/formatDate.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
+      <method v="2" />
+    </configuration>
+    <configuration name="formatStr.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="formatStr.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
       <method v="2" />
     </configuration>
     <configuration name="getType.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="getType.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
@@ -116,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.formatStr.js" />
         <item itemvalue="Node.js.getType.js" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.formatDate.js" />
@@ -182,7 +186,8 @@
       <workItem from="1568258958953" duration="3592000" />
       <workItem from="1568435485159" duration="5821000" />
       <workItem from="1568516833241" duration="2259000" />
-      <workItem from="1568519610597" duration="2747000" />
+      <workItem from="1568519610597" duration="4098000" />
+      <workItem from="1568551625555" duration="1578000" />
     </task>
     <servers />
   </component>
