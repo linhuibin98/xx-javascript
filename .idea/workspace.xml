@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/方法封装/cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/方法封装/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/tslint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/tslint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/方法封装/getType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/4.元素节点.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/4.元素节点.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/banner/css/banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/banner/css/banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/元素节点.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/移动端事件.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/移动端事件.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/note_imgs/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/note_imgs/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/note_imgs/nav_item.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/note_imgs/图1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/note_imgs/图2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/webapp/js/1.ts" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/webapp/js/1.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/$js/formatDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/formatDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/$js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/cookie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/$js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/moment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/方法封装/formatDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/formatDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/方法封装/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,11 +102,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.index.js">
+  <component name="RunManager" selected="Node.js.getType.js">
     <configuration name="ejs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/xx-javascript/h5+c3/ejs/ejs.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="formatDate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/javascript/方法封装/formatDate.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
+      <method v="2" />
+    </configuration>
+    <configuration name="getType.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="getType.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
       <method v="2" />
     </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
@@ -130,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.getType.js" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.formatDate.js" />
         <item itemvalue="JavaScript Debug.ejs.html" />
@@ -194,7 +182,7 @@
       <workItem from="1568213214687" duration="61000" />
       <workItem from="1568258958953" duration="3592000" />
       <workItem from="1568435485159" duration="5821000" />
-      <workItem from="1568516833241" duration="137000" />
+      <workItem from="1568516833241" duration="1513000" />
     </task>
     <servers />
   </component>

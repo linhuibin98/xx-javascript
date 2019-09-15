@@ -26,7 +26,7 @@
 
 // 自己实现一个format格式化函数
 
-let format = function (fmt, date) {
+let formatDate = function (fmt, date) {
     date = date || new Date();
    var o = {
        'M+': date.getMonth() + 1, //  月份
@@ -48,6 +48,6 @@ let format = function (fmt, date) {
    return fmt;
 };
 
-module.exports = format;
+module.exports = formatDate;
 
 
