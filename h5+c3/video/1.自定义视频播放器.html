@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*outer start*/
+        .outer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 540px;
+            height: 332px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 4px #5b606d;
+        }
+
+        /*video start*/
+        .outer video {
+            float: left;
+            width: 540px;
+            height: 306px;
+            margin: 0;
+            background: #1a1a1a;
+        }
+        /*video end*/
+
+        /*control start*/
+        .outer .control {
+            float: left;
+            width: 100%;
+            height: 27px;
+            background: url("images/ctrs_bg.gif") repeat-x;
+        }
+        .outer .control .play {
+            float: left;
+            width: 15px;
+            height: 17px;
+            margin: 6px 0 0 14px;
+            background-image: url("images/playNode.png");
+        }
+
+        .outer .control .play.pause {
+            background-image: url("images/pause.png");
+        }
+        .outer .control .load {
+            position: relative;
+            float: left;
+            width: 267px;
+            height: 10px;
+            margin: 9px 0 0 14px;
+            background: url("images/load_bg.png");
+        }
+        .outer .control .load .load-left {
+            float: left;
+            height: 100%;
+            width: 3px;
+            background: url("images/left_bg.png");
+        }
+        .outer .control .load .load-right {
+            float: right;
+            height: 100%;
+            width: 3px;
+            background: url("images/right_bg.png");
+        }
+        .outer .control .load .load-crl {
+            position: absolute;
+            top: -2px;
+            left: -6px;
+            z-index: 9;
+            width: 17px;
+            height: 17px;
+            background: url("images/crl_bg.png");
+            cursor: pointer;
+        }
+
+        .outer .control .load .load-bg {
+            position: absolute;
+            top: 0;
+            left: 2px;
+            width: 0;
+            height: 100%;
+            background: url("images/line_bg.png") repeat-x;
+            background-position-y: 1px;
+        }
+
+        .outer .control .time {
+            float: left;
+            width: 75px;
+            font-size: 10px;
+            color: #fff;
+            margin: 7px 0 0 12px;
+        }
+
+        .outer .control .vol {
+            float: left;
+        }
+
+        .outer .control .vol .vol-logo {
+            float: left;
+            width: 17px;
+            height: 16px;
+            margin: 5px 0 0 6px;
+            background: url("images/volume_bg.png") no-repeat;
+        }
+        .outer .control .vol .vol-logo.fs {
+            background: url("images/volume_bg.png") no-repeat;
+        }
+        .outer .control .vol .vol-line {
+            position: relative;
+            float: left;
+            width: 61px;
+            height: 8px;
+            margin: 9px 0 0 3px;
+            background: url("images/volumeLine_bg.png") repeat-x;
+        }
+
+        .outer .control .vol .vol-line .line-left {
+            float: left;
+            width: 3px;
+            height: 100%;
+            background: url("images/v_left.png") no-repeat;
+        }
+
+        .outer .control .vol .vol-line .line-right {
+            float: right;
+            width: 3px;
+            height: 100%;
+            background: url("images/v_right.png") no-repeat;
+        }
+
+        .outer .control .vol .vol-line .vol-crl {
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 15px;
+            height: 13px;
+            background: url("images/vo_d.png");
+        }
+
+        .outer .control .full-btn {
+            float: right;
+            width: 15px;
+            height: 17px;
+            margin: 6px 7px 0 0;
+            background: url("images/full_bg.png");
+        }
+    /*    control end*/
+    </style>
+</head>
+<body>
+    <div class="outer">
+<!--     video    -->
+        <video src="data/imooc.mp4" poster="data/poster.jpg">
+        </video>
+<!--        control-->
+        <div class="control">
+            <div class="play"></div>
+            <div class="load">
+                <div class="load-left"></div>
+                <div class="load-right"></div>
+                <div class="load-crl"></div>
+                <div class="load-bg"></div>
+            </div>
+            <div class="time">
+                <span class="now">00:00</span>
+                <span> - </span>
+                <span class="all">00:00</span>
+            </div>
+            <div class="vol">
+                <div class="vol-logo fs"></div>
+                <div class="vol-line">
+                    <div class="line-left"></div>
+                    <div class="line-right"></div>
+                    <div class="vol-crl"></div>
+                </div>
+            </div>
+            <div class="full-btn"></div>
+        </div>
+    </div>
+
+    <script>
+        let video = document.querySelector('video');
+        let playBtn = document.querySelector('.control .play');
+        let timeNow = document.querySelector('.time .now');
+        let timeAll = document.querySelector('.time .all');
+        let fullBtn = document.querySelector('.control .full-btn');
+        let volLogo = document.querySelector('.vol .vol-logo');
+        let loadCrl = document.querySelector('.load .load-crl');
+        let loadBg = document.querySelector('.load .load-bg');
+        let load = loadCrl.parentElement;
+        let minLeft = -6;
+        let maxLeft = load.offsetWidth - 6;
+        let playFlag = false;
+
+
+        // 视频播放状态改变，处理函数
+        function playChange() {
+            if (video.paused) {
+                video.play();
+                playBtn.classList.add('pause');
+                playFlag = true;
+            } else {
+                video.pause();
+                playBtn.classList.remove('pause');
+                playFlag = false;
+            }
+        }
+
+        // 视频时间处理函数
+        function timeHandle(time, tar) {
+            let m = parseInt(time / 60);
+            let s = parseInt(time - m * 60);
+            s = s < 10 ? '0' + s : s;
+            m = m < 10 ? '0' + m : m;
+            tar.innerHTML = m + ':' + s;
+        }
+
+        // 视频进度条移动
+        function crlMove(curTime, allTime) {
+            allTime = allTime || video.duration;
+            let per = curTime / allTime;
+            loadCrl.style.left = loadCrl.parentElement.offsetWidth * per - 6 + 'px';
+            loadBg.style.width = per * maxLeft + 4 + 'px';
+        }
+
+
+        // 点击视频触发
+        video.addEventListener('click', () => {
+            playChange();
+        });
+
+        // 点击播放/暂停
+        playBtn.addEventListener('click', () => {
+            playChange();
+        });
+
+        // duration视频总时长
+        video.addEventListener('durationchange', () => {
+            timeHandle(video.duration, timeAll);
+        });
+
+        // 已经播放时长
+        function timeUpdate() {
+            let curTime = video.currentTime;
+            timeHandle(curTime, timeNow);
+            crlMove(curTime);
+        }
+        video.addEventListener('timeupdate', timeUpdate);
+
+        // 点击全屏按钮
+        fullBtn.addEventListener('click', () => {
+            video.requestFullscreen();
+        });
+
+        // 点击音量图标，禁音和非禁音切换
+        volLogo.addEventListener('click', () => {
+            video.muted = !video.muted;
+        });
+
+        // 拖拽load-crl 进度条
+            // 鼠标按下监听事件
+        let startX,
+            startL;
+        function downListener (e) {
+            startX = e.clientX; // 开始拖拽时的位置
+            startL = loadCrl.offsetLeft;
+            if (playFlag) {
+                video.pause();  // 拖拽时暂停播放
+            }
+
+            document.onmousemove = moveListener;
+        }
+
+        function moveListener (e) {
+            let endX = e.clientX; // 结束拖拽时的位置
+            let moveX = endX - startX;
+            let computedX = moveX + startL;
+
+            computedX = computedX > maxLeft ? maxLeft : computedX;
+            computedX = computedX < minLeft ? minLeft : computedX;
+
+            loadCrl.style.left = computedX + 'px';
+            let curPer = computedX / maxLeft;  // 当前进度条百分比
+            loadBg.style.width = curPer * maxLeft + 4 + 'px';
+            video.currentTime = curPer * video.duration;
+            e.preventDefault();
+        }
+
+        loadCrl.onmousedown = downListener;
+
+        document.onmouseup = function () {
+            document.onmousemove = null;
+            if (playFlag) {
+                video.play();
+            }
+        };
+
+
+        // 点击进度条
+        load.onclick = e => {
+            let per = e.offsetX / maxLeft;
+            console.log(per);
+            loadCrl.style.left = loadCrl.parentElement.offsetWidth * per - 6 + 'px';
+            loadBg.style.width = per * maxLeft + 4 + 'px';
+            video.currentTime = per * video.duration;
+        }
+
+        // // 节流函数
+        // function debounce(fn, wait) {
+        //     var timer = null;
+        //     return function () {
+        //         var context = this
+        //         var args = arguments
+        //         if (timer) {
+        //             clearTimeout(timer);
+        //             timer = null;
+        //         }
+        //         timer = setTimeout(function () {
+        //             fn.apply(context, args)
+        //         }, wait)
+        //     }
+        // }
+
+        // function dragHandle(e) {
+        //     video.pause();  // 拖拽时暂停播放
+        //     endX = e.screenX;
+        //     let moveX = endX - startX;
+        //     let computedX = parseFloat(computedStyle.left) + moveX;
+        //     if (computedX > maxLeft) {
+        //         computedX = maxLeft;
+        //     } else if(computedX < minLeft) {
+        //         computedX = minLeft;
+        //     }
+        //     loadCrl.style.left = computedX + 'px';
+        //     let curPer = Math.abs(computedX) / (maxLeft - minLeft);  // 当前进度条百分比
+        //     loadBg.style.width = curPer * 100 + '%';
+        //     video.currentTime = curPer * video.duration;
+        // }
+        //
+        // loadCrl.addEventListener('drag', dragHandle);
+        //
+        // loadCrl.addEventListener('dragend', e => {
+        //     video.play();
+        // });
+
+
+    </script>
+</body>
+</html>

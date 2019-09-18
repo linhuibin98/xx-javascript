@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/1.自定义视频播放器.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/2.videojs库.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.ogv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/imooc.webm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/data/poster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/crl_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/ctrs_bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/full_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/full_hover_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/left_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/line_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/line_r_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/load_bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/load_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/playNode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/right_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/v_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/v_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/vo_d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/volumeLine_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5+c3/video/images/volume_bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/方法封装/formatStr.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/方法封装/formatStr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/xx-javascript.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xx-javascript.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/Dom事件/0-event.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +89,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.linters.configure.manually.selectedtslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/javascript/$js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/h5+c3/video" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,18 +103,18 @@
     <property name="ts.external.directory.path" value="D:\Program Files\nodejs\node_global\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xx-javascript\h5+c3\video" />
+      <recent name="E:\xx-javascript\h5+c3\video\images" />
+      <recent name="E:\xx-javascript\javascript\$js" />
+      <recent name="E:\xx-javascript\typescript" />
+      <recent name="E:\xx-javascript\h5+c3\webapp\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xx-javascript\h5+c3\Dom事件" />
       <recent name="E:\xx-javascript\javascript" />
       <recent name="E:\xx-javascript\h5+c3\Dom事件\note_imgs" />
       <recent name="E:\xx-javascript" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xx-javascript\javascript\$js" />
-      <recent name="E:\xx-javascript\typescript" />
-      <recent name="E:\xx-javascript\h5+c3\webapp\css" />
-      <recent name="E:\xx-javascript\h5+c3\webapp\js" />
-      <recent name="E:\xx-javascript\h5+c3\ejs\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -100,8 +129,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.formatStr.js">
-    <configuration name="ejs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/xx-javascript/h5+c3/ejs/ejs.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.1.自定义视频播放器.html">
+    <configuration name="1.自定义视频播放器.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/xx-javascript/h5+c3/video/1.自定义视频播放器.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="formatDate.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/javascript/方法封装/formatDate.js" working-dir="$PROJECT_DIR$/javascript/方法封装">
@@ -118,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.1.自定义视频播放器.html" />
         <item itemvalue="Node.js.formatStr.js" />
         <item itemvalue="Node.js.getType.js" />
         <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.formatDate.js" />
-        <item itemvalue="JavaScript Debug.ejs.html" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +216,14 @@
       <workItem from="1568516833241" duration="2259000" />
       <workItem from="1568519610597" duration="4098000" />
       <workItem from="1568551625555" duration="1578000" />
-      <workItem from="1568607794551" duration="1350000" />
+      <workItem from="1568607794551" duration="1600000" />
+      <workItem from="1568637093195" duration="15000" />
+      <workItem from="1568693272157" duration="8335000" />
+      <workItem from="1568711028442" duration="16614000" />
+      <workItem from="1568728647778" duration="118000" />
+      <workItem from="1568730572136" duration="7782000" />
+      <workItem from="1568772837821" duration="75000" />
+      <workItem from="1568775414944" duration="1942000" />
     </task>
     <servers />
   </component>

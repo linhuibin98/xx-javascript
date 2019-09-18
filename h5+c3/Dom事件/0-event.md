@@ -18,6 +18,7 @@
 
       offsetX: 事件触发位置距离该事件触发元素 左边 距离
       offsetY:   事件触发位置距离该事件触发元素 上边 距离
+      offsetWidth: 
 
       pageX: 事件触发时在页面上的坐标（滚动条会影响）
       pageY:
