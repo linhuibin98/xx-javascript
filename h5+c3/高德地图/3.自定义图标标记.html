@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        window.init = function(){
+            var map = new AMap.Map('container', {
+                center:[117.000923,36.675807],
+                zoom:11
+            });
+
+            var icon = new AMap.Icon({
+                size: new AMap.Size(40, 50), // 图标尺寸
+                image: './icon.png',
+                imageSize: new AMap.Size(40, 50)
+            });
+
+            map.on('click', function(e) {
+                var marker = new AMap.Marker({
+                    map: map,
+                    position: [e.lnglat.getLng(), e.lnglat.getLat()],
+                    icon: icon
+                });
+
+
+            })
+        }
+    </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=1cfdf43bce909036009f396a6c4b98bd&callback=init"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

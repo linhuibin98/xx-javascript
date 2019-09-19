@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+        window.init = function() {
+            var map = new AMap.Map('container', {
+                center: [117.000923, 36.675807],
+                zoom: 11,
+                viewMode: '3D',
+                pitch: 90,
+                showBuildingBlock: true,
+                buildingAnimation: true
+            });
+
+            map.addControl(new AMap.ToolBar());
+            map.addControl(new AMap.Scale());
+            map.addControl(new AMap.OverView());
+            map.addControl(new AMap.ControlBar());
+        }
+    </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=1cfdf43bce909036009f396a6c4b98bd&callback=init&plugin=AMap.ToolBar,AMap.Scale,AMap.OverView,AMap.ControlBar"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

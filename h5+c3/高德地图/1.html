@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="高德地图3云数据检索服务" />
+    <meta charset="utf-8">
+    <title>place search</title>
+    <script type="text/javascript">
+        window.init = function(){
+            var map = new AMap.Map('container', {
+                center:[117.000923,36.675807],
+                zoom:11
+            });
+
+            AMap.service(["AMap.PlaceSearch"], function() {
+                new AMap.PlaceSearch({
+                    map: map,
+                    panel: 'panel',
+                    city: '北京市',
+                    pageSize: 5,
+                    orderBy: '_id:ASC'
+                }).search('海底世界');
+            });
+        }
+    </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=1cfdf43bce909036009f396a6c4b98bd&callback=init"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div id="panel"></div>
+</body>
+</html>
