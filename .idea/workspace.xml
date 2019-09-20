@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/h5+c3/高德地图/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5+c3/高德地图/2.地图标记.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5+c3/高德地图/3.自定义图标标记.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5+c3/高德地图/4.地图控件3D.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5+c3/高德地图/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/本地存储/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/本地存储/note.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +198,10 @@
       <workItem from="1568814930023" duration="4000" />
       <workItem from="1568860132345" duration="675000" />
       <workItem from="1568862613865" duration="2751000" />
-      <workItem from="1568875910046" duration="6737000" />
+      <workItem from="1568875910046" duration="6932000" />
+      <workItem from="1568896253900" duration="32000" />
+      <workItem from="1568897719579" duration="600000" />
+      <workItem from="1568899514601" duration="1733000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>indexedDB</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var request = indexedDB.open("test");
+
+      // 错误处理
+      request.onerror = function(event) {
+        // 错误处理
+        console.log(event.target.error);
+      };
+
+      request.onupgradeneeded = function(event) {
+        // 保存IDBDataBase接口
+        var db = event.target.result;
+
+        // 我们的客户数据看起来像这样。
+        const customerData = [
+          { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
+          { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+        ];
+
+        // 为该数据库创建一个对象仓库
+        var objectStore = db.createObjectStore('customers', {keyPath: "ssn"});
+        console.log(objectStore);
+
+         // 建立一个索引来通过姓名来搜索客户。名字可能会重复，所以我们不能使用 unique 索引
+        objectStore.createIndex('name', 'name', {unique: false});
+        // 使用邮箱建立索引，我们向确保客户的邮箱不会重复，所以我们使用 unique 索引
+        objectStore.createIndex('email', 'email', {unique: true});
+
+        // 使用事务的 oncomplete 事件确保在插入数据前对象仓库已经创建完毕
+        objectStore.transaction.oncomplete = function(event) {
+          var customerObjectStore = db.transaction(['customers'], 'readwrite').objectStore('customers');
+          customerData.forEach(function(custmer) {
+            customerObjectStore.add(custmer);
+          })
+        }
+
+      };
+
+      request.onsuccess = function (event) {
+        // console.log(event.target.result);
+      }
+    </script>
+  </body>
+</html>

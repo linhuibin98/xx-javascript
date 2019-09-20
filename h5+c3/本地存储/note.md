@@ -53,3 +53,18 @@
             - 对于重要的信息我们一般不要存储到本地，如果非要存储的话我们需要把存储的信息进行加密
             -  可逆转加密：加密完成还可以解密回来
             -  不可逆转加密：MD5
+            
+## 面试题
+1、a.meituan.com 和 b.meituan.com 这两个域能够共享同一个 localStorage 吗？
+
+2、在 webview 中打开一个页面：i.meituan.com/home.html，点击一个按钮，调用 js 桥打开一个新的 webview：i.meituan.com/list.html，这两个分属不同 webview 的页面能共享同一个 localStorage 吗？
+
+3、如果 localStorage 存满了，再往里存东西，或者要存的东西超过了剩余容量，会发生什么？
+
+答案
+
+1、同一个域名（document.domain）共享同一个 localStorage，a.meituan.com 和 b.meituan.com 是两个域名，所以不能共享
+
+2、能。相当于同一个浏览器的不同标签页。不同浏览器之间不能共享。
+
+3、存不进去并报错（QuotaExceededError）
