@@ -112,3 +112,17 @@ camelize = function(str) {
   })
 }
 ```
+
+将 word-word 的形式的字符串转换成 wordWord 的形式， - 可以为一个或多个。正则表达式匹配了一个或多个 - ，捕获组是捕获 - 号后的第一个字母，并将字母变成大写
+
+#### dasherize方法: 驼峰式的写法转换成连字符 - 的写法
+
+```javascript
+function dasherize(str) {
+    return str.replace(/::/g, '/')
+           .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
+           .replace(/([a-z\d])([A-Z])/g, '$1_$2')
+           .replace(/_/g, '-')
+           .toLowerCase()
+  }
+```

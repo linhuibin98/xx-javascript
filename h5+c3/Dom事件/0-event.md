@@ -1,4 +1,4 @@
-/*
+
       阻止事件冒泡：
             w3c的方法是e.stopPropagation()，IE则是使用e.cancelBubble = true
 
@@ -51,7 +51,7 @@ childNodes   目标元素的孩子节点（包括文本节点），数组存储
 
 childElementCount   目标元素的孩子元素的数量
 
-children   目标元素的孩子元素(不不不包括文本节点)
+children   目标元素的孩子元素(不包括文本节点)
 
 classList    ["box", "wrap", value: "box wrap"]   目标元素class 的类名，数组方式依次存储，最后一位存储class在标签上的值
 
