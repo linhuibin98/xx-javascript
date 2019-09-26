@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rem</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .box {
+      width: 3rem;
+      height: 3rem;
+      background: deepskyblue;
+      border-bottom: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <script>
+    (function() {
+      'use strict'
+
+      setFontSize();
+      window.addEventListener('resize', setFontSize);
+
+      function setFontSize() {
+        var desWidth = 750,  // 设计稿宽度
+            minWidth = 320,
+            maxWidth = 540,
+            docEl = document.documentElement,
+            viewWidth = docEl.getBoundingClientRect().width || window.innerWidth;  // 获取视口宽度
+
+          // width 临界值 判断
+        if (maxWidth && (viewWidth > maxWidth)) {
+          viewWidth = maxWidth;
+        } else if (minWidth && (viewWidth < minWidth)) {
+          viewWidth = minWidth;
+        }
+
+        // 设置html font-size, 默认 1rem = 100px, 随viewWidth改变
+        docEl.style.fontSize = viewWidth / desWidth * 100 + 'px'; 
+      }       
+    })()
+  </script>
+</body>
+</html>

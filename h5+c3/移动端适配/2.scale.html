@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scale</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .box {
+      width: 3rem;
+      height: 3rem;
+      background: deepskyblue;
+      border-bottom: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <script>
+    // 解决高清屏下 1px边框问题
+    (function() {
+      'use strict'
+      
+      var desWidth = 750,  // 设计稿宽度
+          dpr = window.devicePixelRatio || 1;
+
+      dpr = dpr >= 3 ? 3 : (dpr >= 2 ? 2 : 1);
+      // 由 dpr确认 scale
+      var scale = 1 / dpr;
+
+      // 动态创建(修改) meta viewpor 标签
+      var meView = document.querySelector('meta[name="viewport"]');
+      var content = 'width=device-width, initial-scale='+scale+', user-scalable=no, minimum-scale='+scale+', maximum-scale='+scale;
+
+      if (meView) { // 若存在meta viewport, 直接修改content
+        meView.setAttribute('content', content);
+      } else { // 否则创建 meta viewport
+        var me = document.createElement('meta');
+        me.setAttribute('name', 'viewport');
+        me.setAttribute('content', content);
+
+        // 将meta 插入 head
+        document.head.appendChild(me);
+      }
+
+      setFontSize();
+      window.addEventListener('resize', setFontSize);
+
+      function setFontSize() {
+        var desWidth = 750,  // 设计稿宽度
+            minWidth = 320,
+            maxWidth = 540,
+            docEl = document.documentElement,
+            viewWidth = docEl.getBoundingClientRect().width || window.innerWidth;  // 获取视口宽度
+
+          // width 临界值 判断
+        if (maxWidth && (viewWidth / dpr > maxWidth)) {
+          viewWidth = maxWidth * dpr;
+        } else if (minWidth && (viewWidth / dpr < minWidth)) {
+          viewWidth = minWidth * dpr;
+        }
+
+        // 设置html font-size, 默认 1rem = 100px, 随viewWidth改变
+        docEl.style.fontSize = viewWidth / desWidth * 100 + 'px'; 
+      }       
+    })()
+  </script>
+</body>
+</html>

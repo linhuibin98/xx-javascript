@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="css/sumsung.css">
+  <title>Samsung</title>
+</head>
+<body>
+  <header class="header-container">
+    <div class="container">
+      <div class="row">
+        <div class="header-logo-container col-4 col-sm-3">
+          <a href="#"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="header-btn-container col-4 col-offset-4 d-sm-none">
+          <button type="button" class="header-btn">
+            <span class="btn-toggle-bar"></span>
+            <span class="btn-toggle-bar"></span>
+            <span class="btn-toggle-bar"></span>
+          </button>
+        </div>
+        <nav class="header-nav-container col-sm-8 d-none d-sm-block">
+          <ul class="header-nav">
+            <li class="header-nav-item"><a>手机&平板</a></li>
+            <li class="header-nav-item"><a>电视&影音</a></li>
+            <li class="header-nav-item"><a>生活家电</a></li>
+            <li class="header-nav-item"><a>电脑/办公/存储</a></li>
+            <li class="header-nav-item"><a>网上商城</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <nav class="nav-container">
+      <ul class="container">
+        <li class="nav-item"><a>手机&平板</a></li>
+        <li class="nav-item"><a>电视&影音</a></li>
+        <li class="nav-item"><a>生活家电</a></li>
+        <li class="nav-item"><a>电脑/办公/存储</a></li>
+        <li class="nav-item"><a>网上商城</a></li>
+      </ul>
+    </nav>
+  <div class="slider-container">
+    <div class="container">
+      <div class="row">
+          <div class="slider-ad-img col-sm-7">
+            <img src="img/1.png" alt="">
+          </div>
+        <div class="slider-text-container col-sm-5">
+          <h3>Galaxy S9｜S9+</h3>
+          <h4>冰蓝 焕新上市</h4>
+          <div class="slider-btn">
+            <button>了解更多</button>
+            <button>立即购买</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var btn = document.querySelector('.header-btn');
+    var navCtn = document.querySelector('.nav-container');
+    
+    btn.onclick = function() {
+      navCtn.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
