@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bbe79e7-e91d-4c79-a834-7e6c1d6beefa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/h5+c3/grid栅格/css/grid.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5+c3/本地存储/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/本地存储/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/grid栅格/css/sumsung.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/grid栅格/css/sumsung.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/grid栅格/grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/grid栅格/grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5+c3/grid栅格/sumsung.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5+c3/grid栅格/sumsung.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +207,7 @@
       <workItem from="1568899514601" duration="1733000" />
       <workItem from="1569469353439" duration="4000" />
       <workItem from="1569472546577" duration="2000" />
+      <workItem from="1569557057339" duration="436000" />
     </task>
     <servers />
   </component>

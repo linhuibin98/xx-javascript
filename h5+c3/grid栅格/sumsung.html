@@ -1,73 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="grid.css">
-  <link rel="stylesheet" href="css/sumsung.css">
-  <title>Samsung</title>
-</head>
-<body>
-  <header class="header-container">
-    <div class="container">
-      <div class="row">
-        <div class="header-logo-container col-4 col-sm-3">
-          <a href="#"><img src="img/logo.svg" alt=""></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/sumsung.css" />
+    <title>Samsung</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="container">
+        <div class="row">
+          <div class="header-logo-container col-xs-3 col-sm-4">
+            <a class="header-logo" href="sumsung.html"
+              ><img src="img/logo.svg" alt=""
+            /></a>
+          </div>
+          <nav class="header-nav-container col-sm-8">
+            <ul class="header-nav">
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="header-nav-link">手机&平板</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="header-nav-link">电视&影音</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="header-nav-link">生活家电</a>
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="header-nav-link"
+                  >电脑/办公/存储</a
+                >
+              </li>
+              <li class="header-nav-item">
+                <a class="header-nav-link" href="header-nav-link">网上商城</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-btn-container col-xs-9">
+            <button class="header-btn-toggle">
+              <span class="btn-toggle"></span>
+              <span class="btn-toggle"></span>
+              <span class="btn-toggle"></span>
+            </button>
+          </div>
         </div>
-        <div class="header-btn-container col-4 col-offset-4 d-sm-none">
-          <button type="button" class="header-btn">
-            <span class="btn-toggle-bar"></span>
-            <span class="btn-toggle-bar"></span>
-            <span class="btn-toggle-bar"></span>
-          </button>
-        </div>
-        <nav class="header-nav-container col-sm-8 d-none d-sm-block">
-          <ul class="header-nav">
-            <li class="header-nav-item"><a>手机&平板</a></li>
-            <li class="header-nav-item"><a>电视&影音</a></li>
-            <li class="header-nav-item"><a>生活家电</a></li>
-            <li class="header-nav-item"><a>电脑/办公/存储</a></li>
-            <li class="header-nav-item"><a>网上商城</a></li>
-          </ul>
-        </nav>
       </div>
-    </div>
-  </header>
-  <nav class="nav-container">
+    </header>
+    <nav class="nav-container">
       <ul class="container">
-        <li class="nav-item"><a>手机&平板</a></li>
-        <li class="nav-item"><a>电视&影音</a></li>
-        <li class="nav-item"><a>生活家电</a></li>
-        <li class="nav-item"><a>电脑/办公/存储</a></li>
-        <li class="nav-item"><a>网上商城</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="header-nav-link">手机&平板</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="header-nav-link">电视&影音</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="header-nav-link">生活家电</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="header-nav-link">电脑/办公/存储</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="header-nav-link">网上商城</a>
+        </li>
       </ul>
     </nav>
-  <div class="slider-container">
-    <div class="container">
-      <div class="row">
-          <div class="slider-ad-img col-sm-7">
-            <img src="img/1.png" alt="">
+    <div class="slider-container">
+      <div class="container">
+        <div class="row">
+          <div class="slider-text-container col-sm-5 col-sm-push-7">
+            <h3 class="slider-title">Galaxy S9｜S9+</h3>
+            <h4 class='slider-desc'>冰蓝 焕新上市</h4>
+            <div class="text-btn-container">
+              <button class="text-btn">了解更多</button>
+              <button class="text-btn">立即购买</button>
+            </div>
           </div>
-        <div class="slider-text-container col-sm-5">
-          <h3>Galaxy S9｜S9+</h3>
-          <h4>冰蓝 焕新上市</h4>
-          <div class="slider-btn">
-            <button>了解更多</button>
-            <button>立即购买</button>
+          <div class="slider-ad-container col-sm-7 col-sm-pull-5">
+            <img src="img/1.png" alt="" class="slider-ad" />
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="product-container">
+      <div class="container">
+        <div class="row">
+          <div class="product col-sm-4"><a class="product-link" href=""><img class="product-img" src="img/2-1.jpg" alt=""></a></div>
+          <div class="product col-sm-4"><a class="product-link" href=""><img class="product-img" src="img/2-2.jpg" alt=""></a></div>
+          <div class="product col-sm-4"><a class="product-link" href=""><img class="product-img" src="img/2-3.jpg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="backtop-container">
+      <a class="backtop" href="#">回到顶部</a>
+    </div>
+    <div class="help-container">
+      <div class="container">
+        <div class="help-info-container">
+          <p>* Galaxy A9s具备后置四摄功能，Galaxy A6s为后置双摄产品。</p>
+          <p>* Galaxy S9 | S9+广告中手机背面图是Galaxy S9+，Galaxy S9为背面单摄像头产品。</p>
+          <p>* 本网站的产品图片以及型号、数据、功能、性能、规格参数等仅供参考，三星有可能对上述内容进行改进，具体信息请参照产品实物、产品说明书。</p>
+          <p>* 除非经特殊说明，本网站中所涉及的数据均为三星内部测试结果，涉及的对比均为与三星产品相比较。</p>
+        </div>
+        <div class="row">
+          <a class="backtop col-sm-2 col-sm-push-10" href="#">回到顶部</a>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <h3>网站地图</h3>
+            <ul>
+              <li>关于三星</li>
+              <li>投资者关系</li>
+              <li>新闻中心</li>
+              <li>人才招聘</li>
+              <li>三星开发者网站</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <h3>三星商店</h3>
+            <ul>
+              <li>网上商城</li>
+              <li>最新活动</li>
+              <li>授权体验店</li>
+              <li>全产品专卖店</li>
+              <li>三星视频空间</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <h3>网站地图</h3>
+            <ul>
+              <li>在线服务</li>
+              <li>邮件咨询</li>
+              <li>联系我们</li>
+              <li>服务中心查询</li>
+              <li>三星专卖店招募</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <h3>官方分享</h3>
+            <ul class="share-container">
+              <li><a href="#" class='share-weixin'></a></li>
+              <li><a href="#" class='share-weibo'></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10">
+            <ul class="footer-service">
+              <li class="footer-item"><a href="">服务条款</a></li>
+              <li class="footer-item"><a href=""> 重要声明</a></li>
+              <li class="footer-item"><a href="">隐私政策</a></li>
+            </ul>
+          </div>
+          <div class="lang col-sm-2">中国/中文 ></div>
+        </div>
+        <div class="footer-info">
+          <p>此网页最好使用IE10浏览器、Chrome浏览器、Safari浏览器或其他新式浏览器进行浏览</p>
+          <p>京ICP备05068163号 京公网安备110105011756号</p>
+        </div>
+      </div>
+    </footer>
 
-  <script>
-    var btn = document.querySelector('.header-btn');
-    var navCtn = document.querySelector('.nav-container');
-    
-    btn.onclick = function() {
-      navCtn.classList.toggle('active');
-    }
-  </script>
-</body>
+    <script>
+      var btn = document.querySelector(".header-btn-toggle");
+      var nav = document.querySelector(".nav-container");
+      btn.onclick = function() {
+        nav.classList.toggle("active");
+      };
+    </script>
+  </body>
 </html>
