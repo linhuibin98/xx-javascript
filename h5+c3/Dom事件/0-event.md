@@ -19,6 +19,7 @@
       offsetX: 事件触发位置距离该事件触发元素 左边 距离
       offsetY:   事件触发位置距离该事件触发元素 上边 距离
       offsetWidth: 
+      offsetHeight
 
       pageX: 事件触发时在页面上的坐标（滚动条会影响）
       pageY:
@@ -28,10 +29,8 @@
 
       clientX:  （浏览器端 坐标系）提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)。例如，不论页面是否有水平滚动，当你点击客户端区域的左上角时，鼠标事件的 clientX 值都将为 0
       clientY:  提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 clientY 值为 0 ，这一值与页面是否有垂直滚动无关
-      
-    */
 
-/*
+
   移动端event独有属性、方法 ：
     event.changedTouches     
     event.touches
@@ -45,8 +44,7 @@
 
     event.target    事件触发目标元素 (就是用querySelector(), 或者document.getElementById()获取的元素上拥有的属性和方法)
 
-  
- */
+
 childNodes   目标元素的孩子节点（包括文本节点），数组存储
 
 childElementCount   目标元素的孩子元素的数量
